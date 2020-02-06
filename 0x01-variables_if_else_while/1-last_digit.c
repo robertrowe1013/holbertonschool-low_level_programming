@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include<stdlib.h>
+#include<time.h>
 
 /**
   * main - display the last digit of a random number
@@ -10,13 +10,15 @@
 
 int main(void)
 {
-	int n, i;
+	int n;
+	int i;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	i = n % 10
+	i = n % 10;
 
-	printf("The last digit of %d is %d", n, i)
+	printf("The last digit of %d is %d", n, i);
+
 	if (i > 5)
 		printf(" and is greater than 5\n");
 	if (i == 0)
