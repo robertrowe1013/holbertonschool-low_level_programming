@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-  * main - two digit uniq numbers
+  * main - interate unique 2 digit numbers
   *
   * Return: 0
   */
