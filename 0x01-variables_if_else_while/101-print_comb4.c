@@ -1,19 +1,21 @@
 #include <stdio.h>
 /**
-  * main - interate unique 2 digit numbers
+  * main - unique three digit numbers
   *
   * Return: 0
   */
 int main(void)
 {
-	int ones = '1';
-	int tens = '0';
+	int ones = '2';
+	int tens = '1';
+	int hunds = '0';
 
-	while (tens <= '8' && ones <= '9')
+	while (hunds <= '7' && tens <= '8' && ones <= '9')
 	{
+		putchar (hunds);
 		putchar (tens);
 		putchar (ones);
-		if (tens == '8' && ones == '9')
+		if (hunds == '7' && tens == '8' && ones == '9')
 			;
 		else
 		{
@@ -22,7 +24,8 @@ int main(void)
 		}
 		if (ones == '9')
 		{
-			tens++;
+			hunds++;
+			tens = (hunds + 1);
 			ones = (tens + 1);
 		}
 		else
