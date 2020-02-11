@@ -8,9 +8,9 @@ void jack_bauer(void)
 	int hr1 = 0;
 	int min10 = 0;
 	int min1 = 0;
-	int linecount = 0;
+	int linecount;
 
-	while (linecount < 1440)
+	for (linecount = 0; linecount < 1440; linecount++)
 	{
 		_putchar(hr10 + '0');
 		_putchar(hr1 + '0');
@@ -18,7 +18,6 @@ void jack_bauer(void)
 		_putchar(min10 + '0');
 		_putchar(min1 + '0');
 		_putchar('\n');
-		linecount++;
 
 		if (min1 < 9)
 		{
@@ -48,5 +47,4 @@ void jack_bauer(void)
 			}
 		}
 	}
-	_putchar('\n');
 }
