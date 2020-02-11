@@ -4,47 +4,24 @@
   */
 void jack_bauer(void)
 {
-	int hr10 = 0;
-	int hr1 = 0;
-	int min10 = 0;
-	int min1 = 0;
-	int linecount;
+	int hr = 0;
+	int min = 0;
+	int hrcount;
+	int mincount;
 
-	for (linecount = 0; linecount < 1440; linecount++)
+	for (hrcount = 0; hrcount < 24; hrcount++)
 	{
-		_putchar(hr10 + '0');
-		_putchar(hr1 + '0');
-		_putchar(':');
-		_putchar(min10 + '0');
-		_putchar(min1 + '0');
-		_putchar('\n');
-
-		if (min1 < 9)
+		for (mincount = 0; mincount < 60; mincount++)
 		{
-			min1++;
+			_putchar((hr / 10) + '0');
+			_putchar((hr % 10) + '0');
+			_putchar(':');
+			_putchar((min / 10) + '0');
+			_putchar((min % 10) + '0');
+			_putchar('\n');
+			min++;
 		}
-		else
-		{
-			min10++;
-			min1 = 0;
-			if (min10 < 6)
-			{
-				;
-			}
-			else
-			{
-				hr1++;
-				min10 = 0;
-				if (hr1 < 10)
-				{
-					;
-				}
-				else
-				{
-					hr10++;
-					hr1 = 0;
-				}
-			}
-		}
+		hr++;
+		min = 0;
 	}
 }
