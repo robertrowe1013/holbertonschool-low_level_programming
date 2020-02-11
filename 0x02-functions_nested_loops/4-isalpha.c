@@ -1,6 +1,7 @@
 #include <ctype.h>
 /**
   * _isalpha - determine if c is a letter
+  * @c: character
   *
   * Return: 1 if lowercase, 0 otherwize
   */

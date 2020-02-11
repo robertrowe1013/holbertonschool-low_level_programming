@@ -1,6 +1,7 @@
 #include <ctype.h>
 /**
   * _islower - determine if c is lowercase
+  * @c: character
   *
   * Return: 1 if lowercase, 0 otherwize
   */
