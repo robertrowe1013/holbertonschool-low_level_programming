@@ -21,13 +21,13 @@ int main(void)
 				one++;
 				putchar(hund + '0');
 				putchar(ten + '0');
-				putchar(one +'0');
+				putchar(one + '0');
 				putchar(',');
 				putchar(' ');
 			}
 			one = ten + 1;
 		}
-		ten = hund;
+		ten = hund + 1;
 	}
 	putchar('\n');
 	return (0);
