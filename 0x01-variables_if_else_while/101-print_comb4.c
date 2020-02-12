@@ -1,34 +1,33 @@
 #include <stdio.h>
 /**
-  * main - unique three digit numbers
+  * main - unique 3 digit numbers
   *
   * Return: 0
   */
 int main(void)
 {
-	int hund = -1;
-	int ten = 0;
-	int one = 1;
+	int hund = 0;
+	int ten = 1;
+	int one = 2;
 
-	while (hund < 7)
+	while (hund <= 7)
 	{
-		hund++;
-		while (ten < 8)
+		while (ten <= 8)
 		{
-			ten++;
-			while (one < 9)
+			while (one <= 9)
 			{
-				one++;
 				putchar(hund + '0');
 				putchar(ten + '0');
 				putchar(one + '0');
-				putchar(',');
-				putchar(' ');
+				if (!(hund == 7 && ten == 8 && one == 9))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			one = ten + 1;
 		}
-		ten = hund + 1;
 	}
 	putchar('\n');
+
 	return (0);
 }
