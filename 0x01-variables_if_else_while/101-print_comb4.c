@@ -19,13 +19,18 @@ int main(void)
 				putchar(hund + '0');
 				putchar(ten + '0');
 				putchar(one + '0');
+				one++;
 				if (!(hund == 7 && ten == 8 && one == 9))
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
+			ten++;
+			one = ten + 1;
 		}
+		hund++;
+		ten = hund + 1;
 	}
 	putchar('\n');
 
