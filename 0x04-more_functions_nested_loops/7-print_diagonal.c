@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
   * print_diagonal - print a diagonal line
-  * @s: number of spaces
-  * @r: number of rows
+  * @n: number
   */
 void print_diagonal(int n)
 {
@@ -10,7 +9,7 @@ void print_diagonal(int n)
 
 	if (n > 0)
 	{
-		for (r = 0;r < n;r++)
+		for (r = 0; r < n; r++)
 		{
 			for (s = 0; s < r; s++)
 			{
