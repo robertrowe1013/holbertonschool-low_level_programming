@@ -6,31 +6,26 @@
   */
 int main(void)
 {
-	int hund = 0;
-	int ten = 1;
-	int one = 2;
+	int hund;
+	int ten;
+	int one;
 
-	while (hund <= 7)
+	for (hund = 0; hund <= 7; hund++)
 	{
-		while (ten <= 8)
+		for (ten = hund + 1; ten <= 8; ten++)
 		{
-			while (one <= 9)
+			for (one = ten +1; one <= 9; one++)
 			{
 				putchar(hund + '0');
 				putchar(ten + '0');
 				putchar(one + '0');
-				one++;
 				if (!(hund == 7 && ten == 8 && one == 9))
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			ten++;
-			one = ten + 1;
 		}
-		hund++;
-		ten = hund + 1;
 	}
 	putchar('\n');
 
