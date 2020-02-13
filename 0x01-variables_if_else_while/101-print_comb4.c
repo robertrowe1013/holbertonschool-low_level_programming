@@ -14,7 +14,7 @@ int main(void)
 	{
 		for (ten = hund + 1; ten <= 8; ten++)
 		{
-			for (one = ten +1; one <= 9; one++)
+			for (one = ten + 1; one <= 9; one++)
 			{
 				putchar(hund + '0');
 				putchar(ten + '0');
