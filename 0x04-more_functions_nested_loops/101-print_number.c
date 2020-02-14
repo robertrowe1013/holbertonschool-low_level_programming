@@ -1,11 +1,11 @@
 #include "holberton.h"
-#include <math.h>
 /**
   * print_number - print number
+  * @n: number
   */
 void print_number(int n)
 {
-	int d;
+	int d = 0;
 	int l = n;
 
 	while ((l / 10) != 0)
@@ -13,14 +13,15 @@ void print_number(int n)
 		d++;
 		l = l / 10;
 	}
-	if (d < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		d = -d;
+		n = -n;
 	}
-	for (d = d + 1; d > 0; d--)
+	while (d > 0)
 	{
-		_putchar((n / (pow(10, (d - 1)))) + '0');
+		_putchar((n / 10) + '0');
+		d--;
 	}
 	_putchar('\n');
 }
