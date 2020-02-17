@@ -1,42 +1,60 @@
 #include "holberton.h"
 /**
-  * times_table - times table
+ * print_comma_space - print comma and spaces
+ * @n: spaces
+ */
+void print_comma_space(int n)
+{
+	int s;
+
+	_putchar(',');
+	for (s = 0; s <= n; s++)
+	{
+		_putchar(' ');
+	}
+}
+/**
+  * print_times_table - times table
+  * @n: number
   */
-void times_table(void)
+void print_times_table(int n)
 {
 	int i, j, num;
 
-	for (i = 0; i < 10; i++)
+	if (n < 0 || n > 15)
 	{
-		_putchar('0');
-		_putchar(',');
-		for (j = 1; j < 10; j++)
+		;
+	}
+	else
+	{
+		for (i = 0; i <= n; i++)
 		{
-			num = (i * j);
-			_putchar(' ');
-			if (j == 9 && num < 10)
+			_putchar('0');
+			for (j = 1; j <= n; j++)
 			{
-				_putchar(' ');
-				_putchar(num + '0');
-				_putchar('\n');
-			}
-			else if (j == 9 && num > 9)
-			{
-				_putchar((num / 10) + '0');
-				_putchar((num % 10) + '0');
-				_putchar('\n');
-			}
-			else if (num < 10)
-			{
-				_putchar(' ');
-				_putchar((num % 10) + '0');
-				_putchar(',');
-			}
-			else
-			{
-				_putchar((num / 10) + '0');
-				_putchar((num % 10) + '0');
-				_putchar(',');
+				num = (i * j);
+				if (num > 99)
+				{
+					print_comma_space(1);
+					_putchar((num / 100) + '0');
+					_putchar(((num / 10) % 10) + '0');
+					_putchar((num % 10) + '0');
+				}
+				else if (num > 9)
+				{
+					print_comma_space(2);
+					_putchar ((num / 10) + '0');
+					_putchar ((num % 10) + '0');
+				}
+				else
+				{
+					print_comma_space(3);
+					_putchar(num + '0');
+				}
+				if (j == n)
+				{
+					_putchar('\n');
+				}
 			}
 		}
 	}
