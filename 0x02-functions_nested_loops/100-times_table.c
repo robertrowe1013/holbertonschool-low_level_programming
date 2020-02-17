@@ -35,20 +35,20 @@ void print_times_table(int n)
 				num = (i * j);
 				if (num > 99)
 				{
-					print_comma_space(1);
+					print_comma_space(0);
 					_putchar((num / 100) + '0');
 					_putchar(((num / 10) % 10) + '0');
 					_putchar((num % 10) + '0');
 				}
 				else if (num > 9)
 				{
-					print_comma_space(2);
+					print_comma_space(1);
 					_putchar ((num / 10) + '0');
 					_putchar ((num % 10) + '0');
 				}
 				else
 				{
-					print_comma_space(3);
+					print_comma_space(2);
 					_putchar(num + '0');
 				}
 				if (j == n)
