@@ -8,9 +8,10 @@
       */
 int main(void)
 {
-	    int n;
+	    char s[10] = "Holberton";
 
-	        n = add(89, 9);
-		    printf("%d\n", n);
-		        return (0);
+	        printf("%s\n", s);
+		    rev_string(s);
+		        printf("%s\n", s);
+			    return (0);
 }
