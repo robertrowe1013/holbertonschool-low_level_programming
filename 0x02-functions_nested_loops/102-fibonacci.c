@@ -9,9 +9,9 @@
 int main(void)
 {
 	int i;
-	long int a = 1;
-	long int b = 2;
-	long int c;
+	unsigned long a = 1;
+	unsigned long b = 2;
+	unsigned long c;
 
 	printf("1, 2");
 	for (i = 0; i <= 49; i++)
