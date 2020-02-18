@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
   * *_strcpy - copy string
-  * @*dest: destination
-  * @*src: string copy
+  * @dest: destination
+  * @src: string copy
   *
   * Return: dest pointer
   */
@@ -15,9 +15,9 @@ char *_strcpy(char *dest, char *src)
 	{
 		sl++;
 	}
-	for (i = 0; i < sl; i++)
+	for (i = 0; i <= sl; i++)
 	{
-		*(dest + i) = *(src +i);
+		*(dest + i) = *(src + i);
 	}
 
 	return (dest);
