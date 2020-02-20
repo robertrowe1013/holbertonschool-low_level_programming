@@ -16,11 +16,12 @@ char *_strcat(char *dest, char *src)
 	{
 		sl++;
 	}
-/*go to src['\0'], start at dest['\0'], replace dest[i] with src[i] */
+/*go to src['\0'], start at dest['\0'], replace dest[sl] with src[i] */
 	while (src[i] != '\0')
 	{
-		dest[sl + i] = src[i];
+		dest[sl] = src[i];
 		i++;
+		sl++;
 	}
 /* add '\0' to end of dest[] */
 	dest[sl] = '\0';
