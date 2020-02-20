@@ -8,13 +8,13 @@ void reverse_array(int *a, int n)
 {
 	int tmp;
 	int i;
-	int rev = n -1;
+	int rev = n - 1;
 
 	if (n % 2 == 0)
 	{
 		n = n / 2;
 	}
-	else 
+	else
 	{
 		n = (n - 1) / 2;
 	}
