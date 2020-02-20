@@ -16,7 +16,7 @@ int main(void)
 			    printf("%s", s2);
 			        p = _strcat(s1, s2);
 				    printf("%s", s1);
-				        printf("%s test", s2);
-					    printf("%s test2", p);
+				        printf("%s", s2);
+					    printf("%s", p);
 					        return (0);
 }
