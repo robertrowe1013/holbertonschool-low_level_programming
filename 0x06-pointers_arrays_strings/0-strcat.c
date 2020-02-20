@@ -11,7 +11,7 @@ char *_strcat(char *dest, char *src)
 	int sl = 0;
 	int i = 0;
 
-/* get string length for dest*/	
+/* get string length for dest*/
 	while (dest[sl] != '\0')
 	{
 		sl++;
@@ -22,7 +22,7 @@ char *_strcat(char *dest, char *src)
 		dest[sl + i] = src[i];
 		i++;
 	}
-/* add '\0' to end of dest[] */	
+/* add '\0' to end of dest[] */
 	dest[sl] = '\0';
 /* return dest to p */
 	return (dest);
