@@ -30,6 +30,8 @@ void print_times_table(int n)
 		for (i = 0; i <= n; i++)
 		{
 			_putchar('0');
+			if (n == 0)
+				_putchar('\n');
 			for (j = 1; j <= n; j++)
 			{
 				num = (i * j);
@@ -52,9 +54,7 @@ void print_times_table(int n)
 					_putchar(num + '0');
 				}
 				if (j == n)
-				{
 					_putchar('\n');
-				}
 			}
 		}
 	}
