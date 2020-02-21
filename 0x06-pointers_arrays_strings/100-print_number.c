@@ -5,5 +5,19 @@
   */
 void print_number(int n)
 {
-	_putchar(n);
+	int digit = 0;
+	int num = n;
+
+	if (num < 0)
+		_putchar('-');
+	else if (num == 0)
+		_putchar('0');
+	else
+	{
+		while (num != 0)
+		{
+			num / 10;
+			digit++;
+		}
+
 }
