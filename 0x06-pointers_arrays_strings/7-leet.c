@@ -1,6 +1,9 @@
 #include "holberton.h"
 /**
   * leet - l337sp34k
+  * @s: string
+  *
+  * Return: string
   */
 char *leet(char *s)
 {
