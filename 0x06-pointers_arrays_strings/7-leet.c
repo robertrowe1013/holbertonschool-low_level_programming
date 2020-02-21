@@ -6,22 +6,19 @@ char *leet(char *s)
 {
 	int i = 0;
 	int a;
-	char arr[] = "AaEeOoTtLl43071";
+	char arr[] = "aeotlAEOTL43071";
 
 	while (s[i] != '\0')
 	{
 		a = 0;
-		while (a <= 10)
+		while (a <= 5)
 		{
-			if (s[i] == (arr[a] || arr[a + 1]))
+			if (s[i] == arr[a] || s[i] == arr[a + 5])
 			{
-				s[i] = arr[a + 11];
-				a += 2;
+				s[i] = arr[a + 10];
+				break;
 			}
-			else
-			{
-				a += 2;
-			}
+			a++;
 		}
 		i++;
 	}
