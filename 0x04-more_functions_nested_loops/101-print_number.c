@@ -5,22 +5,30 @@
   */
 void print_number(int n)
 {
-	int d = 0;
-	int l = n;
+	int digit = 1;
+	int num = n;
 
-	while ((l / 10) != 0)
+	if (num == 0)
+		_putchar('0');
+	else
 	{
-		d++;
-		l = l / 10;
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	while (d > 0)
-	{
-		_putchar((n / 10) + '0');
-		d--;
+		while (num != 0)
+		{
+			num /= 10;
+			digit *= 10;
+		}
+		num = n;
+		digit /= 10;
+		if (num < 0)
+		{
+			_putchar('-');
+			num *= -1;
+		}
+		while (digit != 1)
+		{
+			_putchar(((num / digit) % 10) + '0');
+			digit /= 10;
+		}
+		_putchar((num % 10) + '0');
 	}
 }
