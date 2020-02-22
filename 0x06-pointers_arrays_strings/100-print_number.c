@@ -6,8 +6,15 @@
 void print_number(int n)
 {
 	int digit = 1;
-	int num = n;
+	unsigned int num;
 
+	if (n < 0)
+	{
+		_putchar('-');
+		num = -n;
+	}
+	else
+		num = n;
 	if (num == 0)
 		_putchar('0');
 	else
@@ -19,11 +26,6 @@ void print_number(int n)
 		}
 		num = n;
 		digit /= 10;
-		if (num < 0)
-		{
-			_putchar('-');
-			num *= -1;
-		}
 		while (digit != 1)
 		{
 			_putchar(((num / digit) % 10) + '0');
