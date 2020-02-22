@@ -24,8 +24,11 @@ void print_number(int n)
 			num /= 10;
 			digit *= 10;
 		}
-		num = n;
 		digit /= 10;
+		if (n < 0)
+			num = -n;
+		else
+			num = n;
 		while (digit != 1)
 		{
 			_putchar(((num / digit) % 10) + '0');
