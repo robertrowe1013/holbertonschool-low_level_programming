@@ -16,7 +16,7 @@ int main(void)
 	for (i = 0; n <= 4000000000; i++)
 	{
 		c = a + b;
-		if (i % 2 == 0)
+		if (i % 2 != 0)
 		{
 			n = n + c;
 		}
