@@ -5,8 +5,8 @@
   */
 void print_number(int n)
 {
-	int digit = 1;
-	unsigned num;
+	unsigned int digit = 1;
+	unsigned int num;
 
 	if (n < 0)
 	{
@@ -19,13 +19,12 @@ void print_number(int n)
 		_putchar('0');
 	else
 	{
-		while (num != 0)
+		while (num > 9)
 		{
 			num /= 10;
 			digit *= 10;
 		}
 		num = n;
-		digit /= 10;
 		while (digit != 1)
 		{
 			_putchar(((num / digit) % 10) + '0');

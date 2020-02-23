@@ -1,11 +1,12 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
   * print_number - print number
   * @n: number
   */
 void print_number(int n)
 {
-	int digit = 1;
+	unsigned int digit = 1;
 	unsigned int num;
 
 	if (n < 0)
@@ -19,12 +20,11 @@ void print_number(int n)
 		_putchar('0');
 	else
 	{
-		while (num != 0)
+		while (num > 9)
 		{
 			num /= 10;
 			digit *= 10;
 		}
-		digit /= 10;
 		if (n < 0)
 			num = -n;
 		else
