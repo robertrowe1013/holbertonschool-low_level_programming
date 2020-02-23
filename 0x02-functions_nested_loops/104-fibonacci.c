@@ -15,7 +15,7 @@ int main(void)
 	int i;
 
 	printf("1, 2");
-	for (i = 0; i < 96; i++)
+	for (i = 0; i < 98; i++)
 	{
 		c1 = a1 + b1;
 		c2 = a2 + b2;
