@@ -1,8 +1,9 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
-  * print_number - print number
-  * @n: number
-  */
+ * print_number - print number
+ * @n: number
+ */
 void print_number(int n)
 {
 	unsigned int digit = 1;
@@ -24,7 +25,10 @@ void print_number(int n)
 			num /= 10;
 			digit *= 10;
 		}
-		num = n;
+		if (n < 0)
+			num = -n;
+		else
+			num = n;
 		while (digit != 1)
 		{
 			_putchar(((num / digit) % 10) + '0');
