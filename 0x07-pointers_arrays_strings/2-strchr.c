@@ -21,11 +21,13 @@ char *_strchr(char *s, char c)
 		{
 			return (&s[i]);
 		}
-		else
-		{
-			;
-		}
 	}
-
-	return ('\0');
+	if ((s[sl++] == '\0') && (c == '\0'))
+	{
+		return (&s[sl++]);
+	}
+	else
+	{
+		return ('\0');
+	}
 }
