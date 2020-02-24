@@ -12,6 +12,7 @@ int main(void)
 	        char *f = "";
 		    char *t;
 
+		    printf("%s\n", f);
 		        t = _strstr(s, f);
 			    printf("%s\n", t);
 			        return (0);
