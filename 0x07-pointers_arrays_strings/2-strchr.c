@@ -22,7 +22,7 @@ char *_strchr(char *s, char c)
 			return (&s[i]);
 		}
 	}
-	if ((s[sl++] == '\0') && (c == '\0'))
+	if (c == '\0')
 	{
 		return (&s[sl++]);
 	}
