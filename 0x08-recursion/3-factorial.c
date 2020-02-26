@@ -2,6 +2,8 @@
 /**
   * factorial - factorial
   * @n: number
+  *
+  * Return: -1 if error, else factorial
   */
 int factorial(int n)
 {
@@ -10,5 +12,5 @@ int factorial(int n)
 	if (n == 0)
 		return (1);
 
-	return (n * (factorial(n-1)));
+	return (n * (factorial(n - 1)));
 }
