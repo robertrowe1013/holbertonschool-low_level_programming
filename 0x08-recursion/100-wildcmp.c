@@ -20,6 +20,12 @@ int wildcmp(char *s1, char *s2)
 
 	return (0);
 }
+/**
+  * wildcard - move string past wildcards
+  * @s2: string 2
+  *
+  * Return: new string 2 location
+  */
 char *wildcard(char *s2)
 {
 	if (*s2 != '*')
