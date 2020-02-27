@@ -1,5 +1,5 @@
 #include "holberton.h"
-char* wildcard(char *star);
+char *wildcard(char *star);
 /**
   * wildcmp - compare
   * @s1: string 1
@@ -20,7 +20,7 @@ int wildcmp(char *s1, char *s2)
 
 	return (0);
 }
-char* wildcard(char *s2)
+char *wildcard(char *s2)
 {
 	if (*s2 != '*')
 		return (s2);
