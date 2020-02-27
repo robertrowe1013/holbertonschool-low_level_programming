@@ -16,7 +16,7 @@ int is_prime_number(int n)
 	return (1);
 }
 /**
-  * _prime: prime
+  * _prime - prime
   * @i: iterator
   * @num: number
   *
@@ -30,6 +30,6 @@ int _prime(int i, int num)
 		return (0);
 	if (num > i)
 		return (_prime((i + 1), num));
-	
+
 	return (0);
 }
