@@ -27,7 +27,7 @@ int _slr(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (_slr(s+1) + 1);
+	return (_slr(s + 1) + 1);
 }
 /**
   * pal - palindrome?
@@ -42,7 +42,7 @@ int pal(char *s, int str, int end)
 	if (str > end)
 		return (1);
 	if (s[str] == s[end])
-		return(pal(s, str + 1, end - 1));
+		return (pal(s, str + 1, end - 1));
 
 	return (0);
 }
