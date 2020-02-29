@@ -7,7 +7,7 @@
   * @argc: number of numbers
   * @argv: numbers to add
   *
-  * Return: 0 if no numbers, 1, Error if not a number, else 2
+  * Return: 0 if no numbers, 1 Error if not a number, else 2
   */
 int main(int argc, char *argv[])
 {
@@ -22,20 +22,13 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] == '0')
+		tmp = atoi(argv[i]);
+		if (tmp == 0)
 		{
-			;
+			printf("Error\n");
+			return (1);
 		}
-		else
-		{
-			tmp = atoi(argv[i]);
-			if (tmp == 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
-			sum += tmp;
-		}
+		sum += tmp;
 	}
 	printf("%d\n", sum);
 
