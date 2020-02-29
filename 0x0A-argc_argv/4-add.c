@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
 /**
@@ -12,8 +13,9 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int i2 = 0;
 	int sum = 0;
-	int tmp;
+	int tmp = 0;
 
 	if (argc == 1)
 	{
@@ -22,12 +24,15 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		tmp = atoi(argv[i]);
-		if (tmp == 0)
+		for (i2 = 0; argv[i][i2] != '\0'; i2++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][i2]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+		tmp = atoi(argv[i]);
 		sum += tmp;
 	}
 	printf("%d\n", sum);
