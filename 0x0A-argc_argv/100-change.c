@@ -4,7 +4,8 @@
 #include <string.h>
 /**
   * main - min coins for change
-  *
+  * @argc: must be two
+  * @argv: amount in cents
   * Return: 1 if not exactly one argument, else 0
   */
 int main(int argc, char *argv[])

@@ -2,6 +2,8 @@
 #include <stdio.h>
 /**
   * main - print number of arguements
+  * @argc: number of arguments
+  * @argv: unsued
   *
   * Return: 0
   */

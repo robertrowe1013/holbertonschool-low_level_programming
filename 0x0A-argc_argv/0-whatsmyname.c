@@ -2,6 +2,8 @@
 #include <stdio.h>
 /**
   * main - print file name
+  * @argc: unused
+  * @argv: file name
   *
   * Return: 0
   */

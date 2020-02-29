@@ -4,7 +4,8 @@
 #include <string.h>
 /**
   * main - multiply two numbers
-  *
+  * @argc: must be 3
+  * @argv: numbers to multiply
   * Return: 0, 1 if not two numbers
   */
 int main(int argc, char *argv[])

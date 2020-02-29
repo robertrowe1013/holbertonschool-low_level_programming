@@ -4,6 +4,8 @@
 #include <string.h>
 /**
   * main - sum
+  * @argc: number of numbers
+  * @argv: numbers to add
   *
   * Return: 0 if no numbers, 1, Error if not a number, else 2
   */

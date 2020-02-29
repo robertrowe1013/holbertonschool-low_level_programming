@@ -2,10 +2,12 @@
 #include <stdio.h>
 /**
   * main - list arguements
+  * @argc: number of arguments
+  * @argv: argument names
   *
   * Return: 0
   */
-int main(int argc , char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
