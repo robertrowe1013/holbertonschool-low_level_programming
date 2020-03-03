@@ -11,19 +11,17 @@ char *_strdup(char *str)
 	int sl = 0;
 	static char *dup;
 	int i;
-	char *dup_origin;
 
+	if (*str == '\0')
+		return ('\0');
 	while (str[sl] != '\0')
 		sl++;
-	if (sl == 0)
-		return ('\0');
 	dup = malloc(sl * (sizeof(char) + 1));
 	if (dup == '\0')
 		return ('\0');
-	dup_origin = dup;
 	for (i = 0; i < (sl); i++)
-		dup_origin[i] = str[i];
-	dup_origin[i] = '\0';
+		dup[i] = str[i];
+	dup[i] = '\0';
 
 	return (dup);
 }
