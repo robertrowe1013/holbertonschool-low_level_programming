@@ -9,8 +9,8 @@
 char *_strdup(char *str)
 {
 	int sl = 0;
-	char *dup;
-	int i;
+	static char *dup;
+	char *dup_origin;
 
 	if (str == NULL)
 		return (NULL);
@@ -19,9 +19,14 @@ char *_strdup(char *str)
 	dup = malloc(sl * (sizeof(char) + 1));
 	if (dup == NULL)
 		return (NULL);
-	for (i = 0; i < (sl); i++)
-		dup[i] = str[i];
-	dup[i] = '\0';
+	dup_origin = dup;
+	while (*str)
+	{
+		*dup_origin = *str;
+		dup_origin++;
+		str++;
+	}
+	*dup_origin = '\0';
 
 	return (dup);
 }
