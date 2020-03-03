@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	static char *dup;
 	int i;
 
-	if (*str == '\0')
+	if (str[0] == '\0')
 		return ('\0');
 	while (str[sl] != '\0')
 		sl++;
