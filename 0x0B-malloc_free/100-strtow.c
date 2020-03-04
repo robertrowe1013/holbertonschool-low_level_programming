@@ -6,9 +6,8 @@
   *
   * Return: null if str is null, str is empty, or malloc fails, else string
   */
-char **strtow(char *str)
+char **strtow(__attribute__((unused))char *str)
 {
-	str = (void);
 
 	return (NULL);
 }
