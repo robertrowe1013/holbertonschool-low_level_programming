@@ -27,7 +27,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		ar[i] = 0;
 		i++;
 	}
-	ar[i] = '\0';
 
 	return (ar);
 }
