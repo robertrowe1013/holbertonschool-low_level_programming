@@ -22,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		free(ar);
 		return (NULL);
 	}
-	while (i < nmemb)
+	while (i < (nmemb * size))
 	{
 		ar[i] = 0;
 		i++;
