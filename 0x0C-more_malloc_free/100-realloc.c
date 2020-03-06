@@ -5,7 +5,7 @@
   * @ptr: pointer
   * @old_size: old size
   * @new_size: new size
-  * 
+  *
   * Return: Null if new size is 0 or malloc fails, else pointer
   */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -17,6 +17,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr == NULL)
 	{
 		ptr = malloc(sizeof(char) * new_size);
+		return (ptr)
 	}
 	if (new_size == old_size)
 		return (ptr);
