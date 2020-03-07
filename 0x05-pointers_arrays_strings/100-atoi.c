@@ -27,6 +27,8 @@ int _atoi(char *s)
 			break;
 		}
 	}
+	if (num == 0)
+		return (0);
 	if (neg < 0)
 		return (num * -1);
 
