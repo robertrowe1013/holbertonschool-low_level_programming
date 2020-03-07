@@ -15,8 +15,6 @@ int _atoi(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == '-')
-			neg -= 1;
-		if (s[i] == '+')
 			neg += 1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -28,7 +26,7 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	if (neg < 0)
+	if (neg % 2 != 0)
 		ret = (num * -1);
 	else
 		ret = num;
