@@ -10,9 +10,7 @@
   */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	(void)array;
-	(void)size;
-	(void)cmp;
-
-	return (-1);
+	if (size <= 0)
+		return(-1);
+	
 }
