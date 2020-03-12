@@ -1,3 +1,4 @@
+
 #include "3-calc.h"
 /**
   * get_op_func - get operand
@@ -19,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (ops[i].op[0] == s[0])
+		if (*ops[i].op == *s)
 			return (ops[i].f);
 		i++;
 	}
