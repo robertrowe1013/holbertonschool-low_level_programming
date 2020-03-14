@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 /**
-  * print_stings - print all the strings!
+  * print_strings - print all the strings!
   * @separator: separator
   * @n: number of string things
   */
@@ -11,7 +11,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *arg;
 
-	va_start (list, n);
+	va_start(list, n);
 	if (n == 0)
 		exit(0);
 	printf("%s", va_arg(list, char *));
@@ -26,5 +26,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("%s", arg);
 	}
 	printf("\n");
-	va_end (list);
+	va_end(list);
 }
