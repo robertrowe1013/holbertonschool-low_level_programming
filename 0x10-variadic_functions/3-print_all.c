@@ -16,14 +16,20 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	int i2 = 0;
 	va_list list;
+	char *comma = "";
 
 	va_start(list, format);
-	while (format != NULL && format[i])
+	while (format && format[i])
 	{
+		i2 = 0;
 		while (prt_fmt[i2].s != NULL)
 		{
 			if (*(prt_fmt[i2].s) == format[i])
+			{
+				printf("%s", comma);
 				prt_fmt[i2].prt(list);
+				comma = ", ";
+			}
 			i2++;
 		}
 		i++;
