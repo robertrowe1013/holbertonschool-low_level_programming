@@ -3,6 +3,16 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+  * struct fmt - format to print
+  * @s: format string
+  * @prt: print function
+  */
+typedef struct fmt
+{
+	char *s;
+	void (*prt)(va_list);
+} fmt_t;
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
