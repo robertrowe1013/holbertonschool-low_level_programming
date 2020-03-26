@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 	int tmp;
 	int printflag;
 
-	if (n == 0)
+	if (n < 1)
 		_putchar('0');
 	for (digit = 32; digit >= 0; digit--)
 	{
