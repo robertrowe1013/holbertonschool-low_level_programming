@@ -10,7 +10,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int set;
 
-	if (n == NULL || index > 31)
+	if (index > 31)
 		return (-1);
 	set = (n >> index) & 1;
 	if (set == 0 || set == 1)
