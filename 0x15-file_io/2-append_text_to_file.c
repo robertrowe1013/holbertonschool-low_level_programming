@@ -10,23 +10,19 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int file, fileappend;
 	int sl = 0;
-	char *buffer;
 
 	if (filename == NULL)
 		return (-1);
 	if (text_content == NULL)
-		return (1);
+		text_content = "";
 	file = open(filename, O_WRONLY | O_APPEND);
 	if (file == -1)
 		return (-1);
 	while (text_content[sl] != '\0')
 		sl++;
-	buffer = malloc(sizeof(char) * sl);
-	if (buffer == NULL)
-		return (-1);
-	fileappend = write(file, buffer, sl);
-	free(buffer);
+	fileappend = write(file, text_content, sl);
 	if (fileappend == -1)
 		return (-1);
+	close(file);
 	return (1);
 }
