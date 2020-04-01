@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
 	if (file1 == -1)
 		dprintf(SE, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	if (argv[2] == NULL)
-		dprintf(SE, "Error: Can't write to %s\n", argv[2]), exit(99);
+		dprintf(SE, "Error: Can't write to file %s\n", argv[2]), exit(99);
 	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (file2 == -1)
-		dprintf(SE, "Error: Can't write to %s\n", argv[2]), exit(99);
+		dprintf(SE, "Error: Can't write to file %s\n", argv[2]), exit(99);
 	while (fileread > 0)
 	{
 		fileread = read(file1, buffer, 1024);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 			dprintf(SE, "Error: Can't read from file %s\n", argv[1]), exit(98);
 		filewrite = write(file2, buffer, fileread);
 		if (filewrite == -1)
-			dprintf(SE, "Error: Can't write to %s\n", argv[2]), exit(99);
+			dprintf(SE, "Error: Can't write to file %s\n", argv[2]), exit(99);
 	}
 	c1 = close(file1);
 	if (c1 == -1)
