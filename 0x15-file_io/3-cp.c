@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 	file1 = open(argv[1], O_RDONLY);
 	if (file1 == -1)
 		dprintf(SE, "Error: Can't read from file %s\n", argv[1]), exit(98);
+	if (argv[2] == NULL)
+		dprintf(SE, "Error: Can't write to %s\n", argv[2]), exit(99);
 	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (file2 == -1)
 		dprintf(SE, "Error: Can't write to %s\n", argv[2]), exit(99);
@@ -32,9 +34,10 @@ int main(int argc, char *argv[])
 			dprintf(SE, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	c1 = close(file1);
+	if (c1 == -1)
+		dprintf(SE, "Can't close fd %d\n", file1), exit(100);
 	c2 = close(file2);
-	if (c1 == -1 || c2 == -1)
-		dprintf(SE, "Can't close fd FD_VALUE\n"), exit(100);
+	if (c2 == -1)
+		dprintf(SE, "Can't close fd %d\n", file2), exit(100);
 	return (0);
 }
-
