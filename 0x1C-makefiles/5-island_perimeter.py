@@ -7,8 +7,8 @@ def island_perimeter(grid):
     count = 0
     index = 0
 
-    if grid is None:
-        return None
+    if not isinstance(grid, list)
+        return 0
 
     for row in grid:
         row_len = len(row)
