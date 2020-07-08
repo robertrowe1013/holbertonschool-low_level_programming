@@ -12,12 +12,22 @@ def island_perimeter(grid):
 
     for row in grid:
         row_len = len(row)
+    row_len += 2
 
     grid_line = []
-
+    i = 0
+    while i < row_len:
+        grid_line.append(0)
+        i += 1
     for row in grid:
         for item in row:
+            grid_line.append(0)
             grid_line.append(item)
+            grid_line.append(0)
+    i = 0
+    while i < row_len:
+        grid_line.append(0)
+        i += 1
 
     for item in grid_line:
         if item == 1:
