@@ -20,10 +20,10 @@ def island_perimeter(grid):
         grid_line.append(0)
         i += 1
     for row in grid:
+        grid_line.append(0)
         for item in row:
-            grid_line.append(0)
             grid_line.append(item)
-            grid_line.append(0)
+        grid_line.append(0)
     i = 0
     while i < row_len:
         grid_line.append(0)
