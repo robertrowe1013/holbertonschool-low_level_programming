@@ -34,12 +34,14 @@ int binary_search(int *array, size_t size, int value)
 /**
   * print_array - print array
   * @array: array
-  * @size: size of array
+  * @left: starting print
+  * @right: ending print
   */
 
 void print_array(int *array, int left, int right)
 {
 	int i;
+
 	printf("Searching in array: ");
 	for (i = left; i < right; i++)
 		printf("%d, ", array[i]);
