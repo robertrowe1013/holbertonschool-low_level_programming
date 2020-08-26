@@ -16,7 +16,7 @@ int binary_search(int *array, size_t size, int value)
 		return (-1);
 	left = 0;
 	right = size - 1;
-	while (left < right)
+	while (left <= right)
 	{
 		print_array(array, left, right);
 		pivot = (left + right) / 2;
